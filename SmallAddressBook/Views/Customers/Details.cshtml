@@ -1,0 +1,36 @@
+﻿@model SmallAddressBook.Models.Customer
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+<div class="row">
+    <div class="col-md-6 text-center">
+        
+        <img src="@Url.Content(Model.ImagePath)" width="250" height="250" />
+
+     </div>
+    <div class="col-md-6">
+        <div class="form-group">
+            <h1>
+                @Html.Label(Model.Name)
+                @Html.Label(Model.Surname)
+            </h1>
+
+            <p>
+               I'm  <span>@Html.Label(Model.Name) @Html.Label(Model.Surname)</span> i love programming will all my
+                heart and i'm happy about the opportunity to develop the system, I still want to learn more about software 
+                Development and develop best programs.
+
+            </p>
+            <br />      
+            <br />    
+             
+                 <h2>www.<span>@Html.Label(Model.Name)</span>.co.za | info.<span>@Html.Label(Model.Name)</span>.co.za | @Html.Label(Model.PhoneNumber) </h2>
+        </div>
+        <button type="submit" class="btn btn-primary">Visit Website</button>
+        <button type="submit" class="btn btn-success ">Request</button>
+    </div>
+
+</div>
